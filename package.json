@@ -1,5 +1,11 @@
 {
-  "dependencies": {
+  "scripts": {
+    "start": "npx cypress open"
+  },
+  "devDependencies": {
     "cypress": "^12.5.1"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0"
   }
 }
