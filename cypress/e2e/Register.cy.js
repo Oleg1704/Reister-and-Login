@@ -10,12 +10,13 @@ user.address = faker.address.streetAddress();
 user.city = faker.address.city();
 user.postCode = faker.address.zipCode('####');
 user.username = faker.internet.userName();
-user.password = faker.internet.password(15);
+user.password = faker.internet.password(5);
 
-describe('Test register', () => {
 
-  const register = () => {
-          cy.visit('https://automationteststore.com/index.php?rt=account/login')
+
+it('name test case register',()=>{
+ 
+          cy.visit('/index.php?rt=account/login')
           cy.get('#customer_menu_top').click();
 
           cy.get('.btn-orange .fa-check').click()
@@ -36,31 +37,30 @@ describe('Test register', () => {
           cy.get('#AccountFrm_agree').click();
           cy.get('.col-md-2 .btn').click();
           cy.get('.mb40 .btn').click();
-        }
+        
 
-  it('name test case register',()=>{
-        register()
-    } )
+        console.log(pass);
 
-  });
+      });
 
 
-describe('Test login', () => {
-
-  const log = () => {
-          
-          cy.visit('https://automationteststore.com/index.php?rt=account/login')
+it('Test login', () => {
+     
+          cy.visit('/index.php?rt=account/login')
           cy.get('#customer_menu_top').click();
 
           cy.get('#loginFrm_loginname').type(user.userName);
           cy.get('#loginFrm_password').type(user.password);
           cy.get('#loginFrm > fieldset > .btn').click();
 
-
-        }
-
-  it('name test case login',()=>{
-        log()
-    } )
-
   });
+
+//   it('buying', () => {
+
+//     cy.get('.current');
+//     cy.get('.current .cat_image').click();
+
+
+   
+
+// });
