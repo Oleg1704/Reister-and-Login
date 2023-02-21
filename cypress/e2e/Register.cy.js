@@ -54,13 +54,3 @@ it('Test login', () => {
           cy.get('#loginFrm > fieldset > .btn').click();
 
   });
-
-//   it('buying', () => {
-
-//     cy.get('.current');
-//     cy.get('.current .cat_image').click();
-
-
-   
-
-// });
